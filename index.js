@@ -22,17 +22,13 @@ app.get('/',(req,res)=>{
         res.render('home',{});
     }else{
         res.send('Você buscou: '+req.query.busca);
-    }
-
-  
+    } 
 });
 
 
 app.get('/:slug',(req,res)=>{
     res.send(req.params.slug);
 })
-
-
 
 app.listen(5000,()=>{
     console.log('server rodando!');
